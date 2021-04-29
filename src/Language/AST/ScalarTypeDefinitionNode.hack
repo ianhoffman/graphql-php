@@ -1,0 +1,16 @@
+namespace GraphQL\Language\AST;
+
+class ScalarTypeDefinitionNode extends Node implements TypeDefinitionNode
+{
+    /** @var string */
+    public $kind = NodeKind::SCALAR_TYPE_DEFINITION;
+
+    /** @var NameNode */
+    public $name;
+
+    /** @var NodeList<DirectiveNode> */
+    public $directives;
+
+    /** @var StringValueNode|null */
+    public $description;
+}
